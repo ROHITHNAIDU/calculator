@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <style>
+  
+   body
+   {
+     background-color:#efefef;
+   }
+   
+   .box
+   {
+    height:470px;
+	width:320px;
+	margin-left:100px;
+	background-color:#fff;
+	border-radius:20px;
+	}
+	
+	.displaydesign
+	{
+	 background-color:#64d5c6;
+	 font-size:36px;
+	 height:110px;
+	 width:320px;
+	 border-top-left-radius:20px;
+	 border-top-right-radius:20px;
+	 font-weight:700;
+	 color:#5e5858;
+	}
+
+    .buttondesign
+    {
+	 width:60px;
+	 height:60px;
+	 background:#ecedef
+	 font-size:10px;
+	 font-weight:900;
+	 color:#5E5858;
+	 border: none;
+	 border-radius: 50%;
+	 cursor:pointer;
+	 margin: 10px 5px 0px 10px;
+	 outline:none;
+	 }
+	 
+	 </style>
+	 <script>
+	  function display(val)
+	  {
+	  document.getElementById('final_output').value+=val;
+	  }
+	  function solve()
+	  {
+	  var expr=document.getElementById('final_output').value;
+	  var soln=eval(expr);
+	  document.getElementById('final_output').value=soln;
+	  }
+	  function back()
+	  {
+	   var value=document.getElementById('final_output').value;
+	   document.getElementById('final_output').value=value.substr(0, value.length-1);
+	   }
+	   function clr()
+	  {
+	   document.getElementById('final_output').value="";
+	   }
+	  </script>
+	  
+	</head>
+	<body>
+	 
+	   <h1> &emsp;&emsp;&emsp;&emsp;&nbsp;Simple Calculator</h1>
+	   <div class="box">
+	   <input type="text" class="displaydesign" id="final_output"><br/>
+	   
+	   <button type="button" class="buttondesign" onclick="clr()">C</button>
+	   <button type="button" class="buttondesign" onclick="back()">CE</button>
+	   <button type="button" class="buttondesign" onclick="display('%')">%</button>
+	   <button type="button" class="buttondesign" onclick="display('/')">/</button></br>
+        
+	   <button type="button" class="buttondesign" onclick="display('7')">7</button>
+	   <button type="button" class="buttondesign" onclick="display('8')">8</button>
+	   <button type="button" class="buttondesign" onclick="display('9')">9</button>
+	   <button type="button" class="buttondesign" onclick="display('*')">*</button></br>
+    
+	   <button type="button" class="buttondesign" onclick="display('4')">4</button>
+	   <button type="button" class="buttondesign" onclick="display('5')">5</button>
+	   <button type="button" class="buttondesign" onclick="display('6')">6</button>
+	   <button type="button" class="buttondesign" onclick="display('-')">-</button></br>
+
+	   <button type="button" class="buttondesign" onclick="display('1')">1</button>
+	   <button type="button" class="buttondesign" onclick="display('2')">2</button>
+	   <button type="button" class="buttondesign" onclick="display('3')">3</button>
+	   <button type="button" class="buttondesign" onclick="display('+')">+</button></br>
+
+	   <button type="button" class="buttondesign" onclick="display('.')">.</button>
+	   <button type="button" class="buttondesign" onclick="display('0')">0</button>
+	   <button type="button" class="buttondesign" onclick="display('00')">00</button>
+	   <button type="button" class="buttondesign" onclick="solve()">=</button>
+	   
+	   </div>
+	   
+	   </body>
+	   </html>
